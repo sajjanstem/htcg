@@ -16,10 +16,7 @@ const AboutUs = () => {
             name="description"
             content="HiTech Consulting Group"
           />
-          <meta
-            name="keywords"
-            content="HiTech Consulting Group"
-          />
+          <meta name="keywords" content="HiTech Consulting Group, Software Development, AI Solutions, Blockchain Development, Cloud Services, Web Development, Mobile App Development, Digital Transformation, IT Consulting, Technology Partners" />
           <meta name="author" content="HiTech Consulting Group" />
         </Helmet>
 

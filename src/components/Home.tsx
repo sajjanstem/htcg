@@ -16,10 +16,7 @@ const Home = () => {
             name="description"
             content="HiTech Consulting Group - Empowering Innovation Through Technology"
           />
-          <meta
-            name="keywords"
-            content="HiTech Consulting, Technology Solutions, Software Development, AI, Blockchain"
-          />
+          <meta name="keywords" content="HiTech Consulting Group, Software Development, AI Solutions, Blockchain Development, Cloud Services, Web Development, Mobile App Development, Digital Transformation, IT Consulting, Technology Partners" />
           <meta name="author" content="HiTech Consulting Group" />
         </Helmet>
 
