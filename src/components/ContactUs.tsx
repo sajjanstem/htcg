@@ -37,7 +37,7 @@ const ContactUs = () => {
               <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
               <h3 className="text-xl font-semibold text-gray-200">Address</h3>
               <p className="text-gray-400">
-                Yuva STEM Organisation<br />
+                HiTech Consulting Group<br />
                 131/A, 3rd Floor, NGEF Layout, Outer Ring Road, near Grand Seasons Business Hotel, East of NGEF Layout, Kasturi Nagar, Bengaluru, Karnataka 560043
               </p>
               <h3 className="text-xl font-semibold text-gray-200 mt-4">Email</h3>
@@ -60,7 +60,7 @@ const ContactUs = () => {
                 allowFullScreen={true}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Yuva STEM Organisation"
+                title="HiTech Consulting Group"
               ></iframe>
             </div>
           </div>

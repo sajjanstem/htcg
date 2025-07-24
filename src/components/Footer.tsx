@@ -10,18 +10,18 @@ const Footer = () => {
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" gutterBottom>Website Links</Typography>
             <Link href="/aboutus" color="inherit" underline="none">About Us</Link><br />
-            <Link href="/exams" color="inherit" underline="none">Exams</Link><br />
+            <Link href="/services" color="inherit" underline="none">Services</Link><br />
             <Link href="/contactus" color="inherit" underline="none">Contact Us</Link>
           </Grid>
           <Grid item xs={12} sm={4}>
-            <Typography variant="h6" gutterBottom>Exams</Typography>
+            <Typography variant="h6" gutterBottom>Services</Typography>
             {/* <Link href="#" color="inherit" underline="none">Maths Genius Hunt</Link><br />
             <Link href="#" color="inherit" underline="none">Science Genius Hunt</Link><br /> */}
-            <Link href="/exams" color="inherit" underline="none">Junior Coder Hunt</Link>
+            <Link href="/services" color="inherit" underline="none">Software Services</Link>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" gutterBottom>Our Location</Typography>
-            <Typography variant="body1">Yuva STEM Organisation</Typography>
+            <Typography variant="body1">HiTech Consulting Group</Typography>
             {/* <Typography variant="body1">Line 1, Line 2</Typography> */}
             <p>131/A, 3rd Floor, Outer ring road, near Grand Seasons Business Hotel, Kasturi Nagar</p>
             <Typography variant="body1">Bengaluru, Karnataka 560043(India)</Typography>
@@ -38,7 +38,7 @@ const Footer = () => {
         </Grid>
         <Box sx={{ textAlign: 'center', mt: 3 }}>
           <Typography variant="body2" color="inherit">
-            Copyright © 2024, Yuva STEM Organisation . All rights reserved.
+            Copyright © 2024, HiTech Consulting Group . All rights reserved.
           </Typography>
           <Link href="#" color="inherit" underline="none" sx={{ ml: 1, mr: 1 }}>Privacy Policy</Link>
           <Link href="#" color="inherit" underline="none" sx={{ ml: 1, mr: 1 }}>Terms & Conditions</Link>
