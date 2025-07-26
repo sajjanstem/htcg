@@ -99,17 +99,21 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative" data-aos="fade-right">
+              {/* Second Image (now in front) */}
+              <img
+                src={process.env.PUBLIC_URL + "/assets/aboutImage2.png"}
+                alt="About us decorative"
+                className="absolute bottom-0 right-0 w-1/2 h-auto rounded-xl shadow-lg transform translate-x-2 -translate-y-6 z-20"
+              />
+
+              {/* First Image (now behind) */}
               <img
                 src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
                 alt="About us"
-                className="rounded-xl shadow-lg w-full h-auto"
-              />
-              <img
-                src={process.env.PUBLIC_URL + "/assets/aboutImage3.png"}
-                alt="About us"
-                className="absolute bottom-0 right-0 w-1/2 h-auto rounded-xl shadow-lg transform translate-x-4 translate-y-4"
+                className="relative rounded-xl shadow-lg w-[85%] h-auto max-h-[500px] object-cover z-10"
               />
             </div>
+
             <div data-aos="fade-left">
               <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
                 <img
