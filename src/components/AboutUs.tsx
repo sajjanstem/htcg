@@ -8,8 +8,8 @@ import { FaCheck, FaGlobe, FaMobileAlt, FaApple, FaClock, FaTv, FaMicrochip } fr
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 const branchImage1 = `${process.env.PUBLIC_URL}/assets/branch1.png`;
-const branchImage2 = `${process.env.PUBLIC_URL}/assets/branch1.png`;
-const branchImage3 = `${process.env.PUBLIC_URL}/assets/branch1.png`;
+const branchImage2 = `${process.env.PUBLIC_URL}/assets/branch2.png`;
+const branchImage3 = `${process.env.PUBLIC_URL}/assets/branch3.png`;
 
 const AboutUs: React.FC = () => {
   useEffect(() => {
