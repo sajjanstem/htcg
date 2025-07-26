@@ -87,7 +87,7 @@ const Software = () => {
         <Box className="text-center py-8 border-t border-gray-700" data-aos="fade-up">
           <Typography variant="h5" className="text-2xl font-bold mb-4">Let’s Build Something Exceptional Together</Typography>
           <p className="text-lg text-gray-400 mb-6">Schedule a free consultation and discover how HiTech Consulting Group can elevate your digital journey.</p>
-          <a href="mailto:info@hitechconsulting.in">
+          <a href="mailto:info@hitechconsultinggroup.com">
             <button className="bg-gradient-to-r from-yellow-600 to-yellow-400 text-black font-bold py-3 px-10 rounded-lg hover:opacity-90 transition duration-300 text-base md:text-lg">
               Contact Us Today
             </button>

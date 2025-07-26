@@ -212,7 +212,7 @@ const AboutUs: React.FC = () => {
 
       {/* Footer Call-to-Action */}
       <div className="flex flex-col items-center py-12 border-t border-gray-700 font-inter px-4 md:px-8" data-aos="zoom-in">
-        <a href="mailto:info@hitechconsulting.in" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:info@hitechconsultinggroup.com" target="_blank" rel="noopener noreferrer">
           <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-10 rounded-lg hover:opacity-90 transition duration-300 text-base md:text-lg w-full max-w-xs md:max-w-sm">
             Connect With Our Team
           </button>

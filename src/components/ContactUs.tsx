@@ -40,10 +40,10 @@ const ContactUs = () => {
               <h3 className="text-xl font-semibold text-gray-200 mt-4">Email</h3>
               <p className="text-gray-400">
                 <a
-                  href="mailto:info@yuvastem.org"
+                  href="mailto:info@hitechconsultinggroup.com"
                   className="text-blue-600 hover:text-blue-500 transition"
                 >
-                  info@yuvastem.org
+                  info@hitechconsultinggroup.com
                 </a>
               </p>
               <h3 className="text-xl font-semibold text-gray-200 mt-4">Phone</h3>
@@ -67,7 +67,7 @@ const ContactUs = () => {
   {/* Footer Call-to-Action */}
     <div className="flex flex-col items-center py-12 border-t border-gray-700 font-inter px-4 md:px-8" data-aos="zoom-in">
       <a
-        href="mailto:info@hitechconsulting.in"
+        href="mailto:info@hitechconsultinggroup.com"
         target="_blank"
         rel="noopener noreferrer"
       >

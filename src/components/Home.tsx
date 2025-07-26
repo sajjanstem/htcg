@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -7,9 +8,6 @@ import { FaMobileAlt, FaGamepad, FaGlobe, FaSearch, FaPaintBrush, FaCode } from 
 // Define a type for icon components to satisfy TypeScript
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
-// Dummy images (replace with actual image paths or URLs)
-const aboutImage1 = "https://via.placeholder.com/600x400";
-const aboutImage2 = "https://via.placeholder.com/300x200";
 
 // Wrapper component to render icons safely
 const IconWrapper: React.FC<{ Icon: IconComponent; className?: string }> = ({ Icon, className }) => (
@@ -43,21 +41,21 @@ const Home: React.FC = () => {
             <div data-aos="fade-right">
               <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
                 <img
-                  src="https://via.placeholder.com/20x20?text=Icon"
+                  src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
                   alt="icon"
                   className="mr-2"
                 />
-                What We OFFER
+                WHAT WE OFFER
               </h5>
               <h2 className="text-3xl md:text-4xl font-bold mt-2">Exceptional IT Solutions</h2>
-            </div>
-            <a
-              href="/services"
-              className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
+            </div>            
+        <Link
+          to="/services"
+          className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
               data-aos="fade-up"
-            >
-              View All Services →
-            </a>
+        >
+          View All Services →
+        </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -102,12 +100,12 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative" data-aos="fade-right">
               <img
-                src={aboutImage1}
+                src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
                 alt="About us"
                 className="rounded-xl shadow-lg w-full h-auto"
               />
               <img
-                src={aboutImage2}
+                src={process.env.PUBLIC_URL + "/assets/aboutImage3.png"}
                 alt="About us"
                 className="absolute bottom-0 right-0 w-1/2 h-auto rounded-xl shadow-lg transform translate-x-4 translate-y-4"
               />
@@ -115,7 +113,7 @@ const Home: React.FC = () => {
             <div data-aos="fade-left">
               <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
                 <img
-                  src="https://via.placeholder.com/20x20?text=Icon"
+                  src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
                   alt="icon"
                   className="mr-2"
                 />
@@ -145,21 +143,21 @@ const Home: React.FC = () => {
                   <p className="text-gray-400">We provide continuous support for all client needs.</p>
                 </div>
               </div>
-              <a
-                href="/about"
+              <Link
+                to="/aboutus"
                 className="inline-block mt-6 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >
                 Explore More →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Counter Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+      {/* <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
         <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
             { icon: "https://via.placeholder.com/40x40?text=Year", count: "2019", label: "Found Year" },
@@ -179,14 +177,14 @@ const Home: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Work Process Section */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4 text-center">
           <h5 className="text-yellow-500 flex justify-center items-center text-lg font-semibold mb-2" data-aos="fade-up">
             <img
-              src="https://via.placeholder.com/20x20?text=Icon"
+              src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
               alt="icon"
               className="mr-2"
             />
@@ -233,7 +231,7 @@ const Home: React.FC = () => {
 
       {/* Footer Call-to-Action */}
       <div className="flex flex-col items-center py-12 border-t border-gray-700 font-inter px-4 md:px-8" data-aos="zoom-in">
-        <a href="mailto:info@hitechconsulting.in" target="_blank" rel="noopener noreferrer">
+        <a href="mailto:info@hitechconsultinggroup.com" target="_blank" rel="noopener noreferrer">
           <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-10 rounded-lg hover:opacity-90 transition duration-300 text-base md:text-lg w-full max-w-xs md:max-w-sm">
             Connect With Our Team
           </button>
