@@ -95,70 +95,83 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-16 relative bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="relative" data-aos="fade-right">
-              {/* Transparent decorative image (front and to the left) */}
-              <img
-                src={process.env.PUBLIC_URL + "/assets/aboutImage2.png"}
-                alt="About us decorative"
-                className="absolute bottom-0 left-0 w-1/2 h-auto rounded-xl shadow-lg transform -translate-x-12 -translate-y-6 z-10"
-              />
-
-              {/* Main background image */}
-              <img
-                src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
-                alt="About us"
-                className="relative rounded-xl shadow-lg w-[85%] h-auto max-h-[500px] object-cover z-20 transform translate-x-6"
-              />
-            </div>
-
-            <div data-aos="fade-left">
-              <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
+        <section className="py-16 relative bg-gray-800">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="relative" data-aos="fade-right">
+                {/* Decorative image: only visible on md and larger */}
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
-                  alt="icon"
-                  className="mr-2"
+                  src={process.env.PUBLIC_URL + "/assets/aboutImage2.png"}
+                  alt="About us decorative"
+                  className="
+                    hidden md:block
+                    absolute bottom-0 left-0 w-1/2 h-auto rounded-xl shadow-lg z-10
+                    transform
+                    md:-translate-x-16 md:-translate-y-6
+                  "
                 />
-                ABOUT US
-              </h5>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
-                Empowering Your Business with Innovative IT & AI Solutions
-              </h2>
-              <p className="text-gray-400 mb-4">
-                HiTech Consulting Group is a technology company offering a suite of IT services: web/app/game development, digital marketing, and more. Our mission is to empower businesses to harness technology to achieve their goals.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div
-                  className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h4 className="font-bold text-white">Premier Offerings</h4>
-                  <p className="text-gray-400">Top-tier IT services with modern AI-powered solutions.</p>
-                </div>
-                <div
-                  className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <h4 className="font-bold text-white">24/7 Call Support</h4>
-                  <p className="text-gray-400">We provide continuous support for all client needs.</p>
-                </div>
+
+                {/* Main image */}
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
+                  alt="About us"
+                  className="
+                    relative rounded-xl shadow-lg h-auto max-h-[500px] object-cover z-20
+                    w-full mx-auto
+                    md:w-[85%] md:translate-x-10 md:mx-0
+                  "
+                />
               </div>
-              <Link
-                to="/aboutus"
-                className="inline-block mt-6 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                Explore More →
-              </Link>
+
+              <div data-aos="fade-left">
+                <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
+                  <img
+                    src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
+                    alt="icon"
+                    className="mr-2"
+                  />
+                  ABOUT US
+                </h5>
+                <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+                  Empowering Your Business with Innovative IT & AI Solutions
+                </h2>
+                <p className="text-gray-400 mb-4">
+                  HiTech Consulting Group is a technology company offering a suite of IT services: web/app/game development, digital marketing, and more. Our mission is to empower businesses to harness technology to achieve their goals.
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  <div
+                    className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h4 className="font-bold text-white">Premier Offerings</h4>
+                    <p className="text-gray-400">
+                      Top-tier IT services with modern AI-powered solutions.
+                    </p>
+                  </div>
+                  <div
+                    className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <h4 className="font-bold text-white">24/7 Call Support</h4>
+                    <p className="text-gray-400">
+                      We provide continuous support for all client needs.
+                    </p>
+                  </div>
+                </div>
+                <Link
+                  to="/aboutus"
+                  className="inline-block mt-6 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  Explore More →
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Counter Section */}
       {/* <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
