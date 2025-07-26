@@ -52,7 +52,7 @@ const ContactUs = () => {
             {/* Map */}
             <div className="flex-1">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62200.28460990648!2d77.58683584863279!3d13.0026648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11c26db122c5%3A0xe95ca23faa9830e2!2sYuva%20STEM%20Organisation!5e0!3m2!1sen!2sin!4v1720342114872!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1693718218485!2d78.38922111043864!3d17.451605683377483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb911298f93d07%3A0x6176a920610553a7!2sNEXUS%20BUSINESS%20CENTRE!5e0!3m2!1sen!2sin!4v1753545701965!5m2!1sen!2sin"
                 className="w-full h-96 rounded-lg border border-gray-700"
                 allowFullScreen={true}
                 loading="lazy"

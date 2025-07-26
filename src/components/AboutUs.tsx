@@ -7,9 +7,9 @@ import { FaCheck, FaGlobe, FaMobileAlt, FaApple, FaClock, FaTv, FaMicrochip } fr
 // Define a type for the icon prop to satisfy TypeScript
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
-const branchImage1 = "https://via.placeholder.com/400x300?text=USA";
-const branchImage2 = "https://via.placeholder.com/400x300?text=Bengaluru";
-const branchImage3 = "https://via.placeholder.com/400x300?text=Hyderabad";
+const branchImage1 = `${process.env.PUBLIC_URL}/assets/branch1.png`;
+const branchImage2 = `${process.env.PUBLIC_URL}/assets/branch1.png`;
+const branchImage3 = `${process.env.PUBLIC_URL}/assets/branch1.png`;
 
 const AboutUs: React.FC = () => {
   useEffect(() => {
@@ -65,7 +65,7 @@ const AboutUs: React.FC = () => {
                   Ensuring Your Success Through Our IT Solutions
                 </h2>
                 <p className="text-gray-400 mt-4">
-                  We specialize in designing, developing, and marketing tailored enterprise solutions for clients of all sizes. Our services include providing dedicated development teams and comprehensive support for startups, SMEs, and large enterprises. By blending agile methodologies with robust project management and precise budget control, we deliver innovative solutions that drive success and growth.
+                  We specialize in designing, and developing tailored enterprise solutions for clients of all sizes. Our services include providing dedicated development teams and comprehensive support for startups, SMEs, and large enterprises. By blending agile methodologies with robust project management and precise budget control, we deliver innovative solutions that drive success and growth.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                   <ul className="space-y-2">
@@ -151,7 +151,7 @@ const AboutUs: React.FC = () => {
               Beyond our technical expertise, we focus on building long-term relationships with our clients. By understanding their objectives and working collaboratively, we provide effective solutions aligned with their goals.
             </p>
             <p className="text-gray-400 mt-4">
-              Whether it's developing a website, creating a mobile app, designing graphics, or executing digital marketing campaigns, HiTech Consulting Group is dedicated to delivering outstanding services that drive success and growth. Our commitment to quality.
+              Whether it's developing a website, creating a mobile app, designing graphics, or executing AI enabled solutions, HiTech Consulting Group is dedicated to delivering outstanding services that drive success and growth. Our commitment to quality.
             </p>
             <h3 className="text-2xl font-bold mt-8 mb-4">Our Mission & Vision</h3>
             <p className="text-gray-400">

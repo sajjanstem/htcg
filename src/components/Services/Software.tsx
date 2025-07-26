@@ -44,28 +44,28 @@ const Software = () => {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon3.png" alt="Web Development" />
+                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon1.png"} alt="Web Development" />
                 <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Web Development</h4>
                 <p className="text-gray-300 text-sm">Transform Your Vision into Stunning & Profitable Websites! Our expert team crafts high-performing, intuitive, and visually appealing digital solutions to outshine competition.</p>
               </div>
               <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon1.png" alt="App Development" />
+                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon2.png"} alt="App Development" />
                 <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">App Development</h4>
                 <p className="text-gray-300 text-sm">We create bespoke mobile apps focusing on innovation, ease of use, and high performance across various industries with seamless functionality and security.</p>
               </div>
               <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon1.png" alt="Graphic Design" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Graphic Design</h4>
+                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon3.png"} alt="Cloud Services" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Cloud Services</h4>
                 <p className="text-gray-300 text-sm">Elevate your brand identity with striking visuals and impactful messaging. We craft designs that resonate with your brand’s story and captivate your audience.</p>
               </div>
               <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon2.png" alt="Digital Marketing" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Digital Marketing</h4>
-                <p className="text-gray-300 text-sm">Our full-cycle marketing includes strategy, implementation, and analytics, tailored to deliver growth, visibility, and engagement across digital platforms.</p>
+                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon2.png"} alt="AI powered solutions" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">AI powered solutions</h4>
+                <p className="text-gray-300 text-sm">Our full-cycle developement includes strategy, implementation, and analytics, tailored to deliver growth, visibility, and engagement across digital platforms.</p>
               </div>
               <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon3.png" alt="Video Editing" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Video Editing</h4>
+                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon1.png"} alt="Video Editing" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Data Migration</h4>
                 <p className="text-gray-300 text-sm">From brand videos to cinematic wedding edits, our team delivers high-quality, white-label video editing services that engage and inspire your target audience.</p>
               </div>
             </div>

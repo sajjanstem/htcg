@@ -68,7 +68,7 @@ const Home: React.FC = () => {
               },
               {
                 icon: FaGamepad as IconComponent,
-                title: "Game Development",
+                title: "Cloud Development",
                 description:
                   "Create interactive and immersive gaming experiences tailored to your needs. Our games emphasize creativity, performance, and user engagement.",
               },
@@ -136,7 +136,7 @@ const Home: React.FC = () => {
                   Empowering Your Business with Innovative IT & AI Solutions
                 </h2>
                 <p className="text-gray-400 mb-4">
-                  HiTech Consulting Group is a technology company offering a suite of IT services: web/app/game development, digital marketing, and more. Our mission is to empower businesses to harness technology to achieve their goals.
+                  HiTech Consulting Group is a technology company offering a suite of IT services: web/app development, data migration, cloud projects, and more. Our mission is to empower businesses to harness technology to achieve their goals.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div
