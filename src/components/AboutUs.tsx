@@ -7,12 +7,9 @@ import { FaCheck, FaGlobe, FaMobileAlt, FaApple, FaClock, FaTv, FaMicrochip } fr
 // Define a type for the icon prop to satisfy TypeScript
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
-// Dummy images (replace with actual image paths or URLs)
-const aboutImage1 = "https://via.placeholder.com/600x400";
-const aboutImage2 = "https://via.placeholder.com/300x200";
-const branchImage1 = "https://via.placeholder.com/400x300?text=Jaipur";
-const branchImage2 = "https://via.placeholder.com/400x300?text=Hyderabad";
-const branchImage3 = "https://via.placeholder.com/400x300?text=Chennai";
+const branchImage1 = "https://via.placeholder.com/400x300?text=USA";
+const branchImage2 = "https://via.placeholder.com/400x300?text=Bengaluru";
+const branchImage3 = "https://via.placeholder.com/400x300?text=Hyderabad";
 
 const AboutUs: React.FC = () => {
   useEffect(() => {
@@ -43,12 +40,12 @@ const AboutUs: React.FC = () => {
             <div className="relative" data-aos="fade-right" data-aos-delay="200">
               <div className="relative">
                 <img
-                  src={aboutImage1}
+                  src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
                   alt="About Main"
                   className="w-full h-auto rounded-lg shadow-lg"
                 />
                 <img
-                  src={aboutImage2}
+                  src={process.env.PUBLIC_URL + "/assets/aboutImage2.png"}
                   alt="About Secondary"
                   className="absolute bottom-0 right-0 w-1/2 h-auto rounded-lg shadow-lg transform translate-x-4 translate-y-4"
                 />
@@ -58,7 +55,7 @@ const AboutUs: React.FC = () => {
               <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-6 shadow-md">
                 <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
                   <img
-                    src="https://via.placeholder.com/20x20?text=Icon"
+                    src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
                     alt="icon"
                     className="mr-2"
                   />
@@ -105,7 +102,7 @@ const AboutUs: React.FC = () => {
             <div className="text-center md:text-left" data-aos="fade-left">
               <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
                 <img
-                  src="https://via.placeholder.com/20x20?text=Icon"
+                  src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
                   alt="icon"
                   className="mr-2"
                 />
@@ -141,32 +138,6 @@ const AboutUs: React.FC = () => {
         </div>
       </section>
 
-      {/* Counter Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-6">
-            {[
-              { icon: "https://via.placeholder.com/40x40?text=Year", count: "2019", label: "Found Year" },
-              { icon: "https://via.placeholder.com/40x40?text=Project", count: "50+", label: "Finished Projects" },
-              { icon: "https://via.placeholder.com/40x40?text=Expert", count: "50+", label: "Skilled Experts" },
-              { icon: "https://via.placeholder.com/40x40?text=Post", count: "590+", label: "Media Posts" },
-            ].map((item, index) => (
-              <div
-                key={item.label}
-                className="flex items-center space-x-4"
-                data-aos="bounce-up"
-                data-aos-delay={index * 200}
-              >
-                <img src={item.icon} alt="icon" className="w-10 h-10" />
-                <div>
-                  <h3 className="text-2xl font-bold text-white">{item.count}</h3>
-                  <p className="text-gray-400">{item.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Case Section */}
       <section className="py-12">
@@ -191,9 +162,9 @@ const AboutUs: React.FC = () => {
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 border-t border-b border-gray-700 py-4 mt-8">
               <li className="text-gray-400"><span className="font-semibold">Branches:</span> 3</li>
-              <li className="text-gray-400"><span className="font-semibold">1:</span> Jaipur</li>
-              <li className="text-gray-400"><span className="font-semibold">2:</span> Hyderabad</li>
-              <li className="text-gray-400"><span className="font-semibold">3:</span> Chennai</li>
+              <li className="text-gray-400"><span className="font-semibold">1:</span> USA</li>
+              <li className="text-gray-400"><span className="font-semibold">2:</span> Bengaluru</li>
+              <li className="text-gray-400"><span className="font-semibold">3:</span> Hyderabad</li>
             </ul>
             <h3 className="text-2xl font-bold mt-8 mb-4">DEVELOPED BY HITECH CONSULTING GROUP</h3>
             <p className="text-gray-400">
