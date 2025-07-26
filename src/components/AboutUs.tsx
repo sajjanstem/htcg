@@ -2,65 +2,225 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaCheck, FaGlobe, FaMobileAlt, FaApple, FaClock, FaTv, FaMicrochip } from "react-icons/fa";
 
-const AboutUs = () => {
+// Define a type for the icon prop to satisfy TypeScript
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+// Dummy images (replace with actual image paths or URLs)
+const aboutImage1 = "https://via.placeholder.com/600x400";
+const aboutImage2 = "https://via.placeholder.com/300x200";
+const branchImage1 = "https://via.placeholder.com/400x300?text=Jaipur";
+const branchImage2 = "https://via.placeholder.com/400x300?text=Hyderabad";
+const branchImage3 = "https://via.placeholder.com/400x300?text=Chennai";
+
+const AboutUs: React.FC = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen text-gray-200 font-[Inter] relative overflow-hidden">
-        <Helmet>
-          <title>HiTech Consulting Group</title>
-          <meta
-            name="description"
-            content="HiTech Consulting Group"
-          />
-          <meta name="keywords" content="HiTech Consulting Group, Software Development, AI Solutions, Blockchain Development, Cloud Services, Web Development, Mobile App Development, Digital Transformation, IT Consulting, Technology Partners" />
-          <meta name="author" content="HiTech Consulting Group" />
-        </Helmet>
+      <Helmet>
+        <title>HiTech Consulting Group</title>
+        <meta name="description" content="HiTech Consulting Group" />
+        <meta
+          name="keywords"
+          content="HiTech Consulting Group, Software Development, AI Solutions, Blockchain Development, Cloud Services, Web Development, Mobile App Development, Digital Transformation, IT Consulting, Technology Partners"
+        />
+        <meta name="author" content="HiTech Consulting Group" />
+      </Helmet>
 
       {/* Header Section */}
       <div className="text-center py-12 border-b border-gray-700" data-aos="fade-down">
         <h1 className="text-4xl md:text-6xl font-extrabold">About Us</h1>
       </div>
 
-      {/* Main Content Section */}
-      <section className="max-w-5xl mx-auto py-12 px-4 space-y-8">
-        <div
-          className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-6 shadow-md"
-          data-aos="fade-up"
-        >
-          <p className="text-gray-400 text-sm md:text-base">
-            HiTech Consulting Group is a forward-thinking technology consulting and development company driven by innovation, agility, and real-world impact. We specialize in delivering scalable software solutions across domains such as education, healthcare, enterprise SaaS, and AI-based platforms.
-          </p>
-          <p className="text-gray-400 text-sm md:text-base mt-4">
-            Our core team includes alumni from premier institutions such as <strong>IITs, IIITs, and BITS Pilani</strong>, bringing a wealth of technical expertise and research-driven development. With a strong background in both academia and industry, our engineers and consultants deliver systems that are both innovative and production-grade.
-          </p>
-          <p className="text-gray-400 text-sm md:text-base mt-4">
-            With a combined experience of over a decade in building full-stack platforms, AI systems, blockchain integrations, and scalable web architectures, we help institutions, startups, and enterprises bridge the gap between vision and execution.
-          </p>
-          <p className="text-gray-400 text-sm md:text-base mt-4">
-            We believe in problem-first thinking, lean development, and outcome-focused delivery. Every project we take on is backed by data, design, and deep domain understanding.
-          </p>
+      {/* About Section */}
+      <section className="py-12 relative">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <div className="relative" data-aos="fade-right" data-aos-delay="200">
+              <div className="relative">
+                <img
+                  src={aboutImage1}
+                  alt="About Main"
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+                <img
+                  src={aboutImage2}
+                  alt="About Secondary"
+                  className="absolute bottom-0 right-0 w-1/2 h-auto rounded-lg shadow-lg transform translate-x-4 translate-y-4"
+                />
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+              <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-6 shadow-md">
+                <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
+                  <img
+                    src="https://via.placeholder.com/20x20?text=Icon"
+                    alt="icon"
+                    className="mr-2"
+                  />
+                  WHO WE ARE
+                </h5>
+                <h2 className="text-2xl md:text-3xl font-bold mt-4">
+                  Ensuring Your Success Through Our IT Solutions
+                </h2>
+                <p className="text-gray-400 mt-4">
+                  We specialize in designing, developing, and marketing tailored enterprise solutions for clients of all sizes. Our services include providing dedicated development teams and comprehensive support for startups, SMEs, and large enterprises. By blending agile methodologies with robust project management and precise budget control, we deliver innovative solutions that drive success and growth.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      {/* <FaCheck className="text-yellow-500 mr-2" />  */}
+                      Technology Consultancy
+                    </li>
+                    <li className="flex items-center">
+                      {/* <FaCheck className="text-yellow-500 mr-2" />  */}
+                      We Provide Best Services
+                    </li>
+                  </ul>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      {/* <FaCheck className="text-yellow-500 mr-2" />  */}
+                      Maintenance And Support
+                    </li>
+                    <li className="flex items-center">
+                      {/* <FaCheck className="text-yellow-500 mr-2" />  */}
+                      Requirements Gathering
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-  {/* Footer Call-to-Action */}
-    <div className="flex flex-col items-center py-12 border-t border-gray-700 font-inter px-4 md:px-8" data-aos="zoom-in">
-      <a
-        href="mailto:info@hitechconsulting.in"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-10 rounded-lg hover:opacity-90 transition duration-300 text-base md:text-lg w-full max-w-xs md:max-w-sm">
-          Connect With Our Team
-        </button>
-      </a>
-      <div className="text-gray-500 mt-4 italic text-sm md:text-base text-center">
-        Powered by visionaries, built for scale — where innovation meets execution.
+      {/* Offer Section */}
+      <section className="bg-gray-800 py-12 relative">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
+            <div className="text-center md:text-left" data-aos="fade-left">
+              <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
+                <img
+                  src="https://via.placeholder.com/20x20?text=Icon"
+                  alt="icon"
+                  className="mr-2"
+                />
+                Our Offering
+              </h5>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mt-4">
+                Enhance and Pioneer Using Technology Trends
+              </h2>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { icon: FaGlobe as IconComponent, title: "Website" },
+              { icon: FaMobileAlt as IconComponent, title: "Android" },
+              { icon: FaApple as IconComponent, title: "iOS" },
+              { icon: FaClock as IconComponent, title: "Watch" },
+              { icon: FaTv as IconComponent, title: "Tv" },
+              { icon: FaMicrochip as IconComponent, title: "IOT" },
+            ].map((item, index) => (
+              <div
+                key={item.title}
+                className="bg-gray-700 rounded-lg p-4 text-center"
+                data-aos="bounce-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="text-yellow-500 text-3xl mb-4">
+                  <item.icon />
+                </div>
+                <h4 className="text-white text-lg font-semibold">{item.title}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Counter Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-6">
+            {[
+              { icon: "https://via.placeholder.com/40x40?text=Year", count: "2019", label: "Found Year" },
+              { icon: "https://via.placeholder.com/40x40?text=Project", count: "50+", label: "Finished Projects" },
+              { icon: "https://via.placeholder.com/40x40?text=Expert", count: "50+", label: "Skilled Experts" },
+              { icon: "https://via.placeholder.com/40x40?text=Post", count: "590+", label: "Media Posts" },
+            ].map((item, index) => (
+              <div
+                key={item.label}
+                className="flex items-center space-x-4"
+                data-aos="bounce-up"
+                data-aos-delay={index * 200}
+              >
+                <img src={item.icon} alt="icon" className="w-10 h-10" />
+                <div>
+                  <h3 className="text-2xl font-bold text-white">{item.count}</h3>
+                  <p className="text-gray-400">{item.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Section */}
+      <section className="py-12">
+        <div className="container mx-auto px-4">
+          <div className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-6 shadow-md" data-aos="fade-up">
+            <h3 className="text-2xl font-bold mb-4">About</h3>
+            <p className="text-gray-400">
+              HiTech Consulting Group is a distinguished technology company offering a comprehensive range of services to address the digital needs of businesses and organizations. Our team of skilled professionals leverages cutting-edge technology to deliver innovative solutions and exceptional customer experiences.
+            </p>
+            <p className="text-gray-400 mt-4">
+              Beyond our technical expertise, we focus on building long-term relationships with our clients. By understanding their objectives and working collaboratively, we provide effective solutions aligned with their goals.
+            </p>
+            <p className="text-gray-400 mt-4">
+              Whether it's developing a website, creating a mobile app, designing graphics, or executing digital marketing campaigns, HiTech Consulting Group is dedicated to delivering outstanding services that drive success and growth. Our commitment to quality.
+            </p>
+            <h3 className="text-2xl font-bold mt-8 mb-4">Our Mission & Vision</h3>
+            <p className="text-gray-400">
+              To empower businesses and organizations with cutting-edge technology solutions, enabling them to excel in the digital era and reach their full potential.
+            </p>
+            <p className="text-gray-400 mt-4">
+              To be a premier technology partner, renowned for our expertise, innovation, and dedication to providing outstanding solutions that drive growth, efficiency, and success for our clients. Innovation, and customer satisfaction distinguishes us as a trusted partner in the technology industry.
+            </p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 border-t border-b border-gray-700 py-4 mt-8">
+              <li className="text-gray-400"><span className="font-semibold">Branches:</span> 3</li>
+              <li className="text-gray-400"><span className="font-semibold">1:</span> Jaipur</li>
+              <li className="text-gray-400"><span className="font-semibold">2:</span> Hyderabad</li>
+              <li className="text-gray-400"><span className="font-semibold">3:</span> Chennai</li>
+            </ul>
+            <h3 className="text-2xl font-bold mt-8 mb-4">DEVELOPED BY HITECH CONSULTING GROUP</h3>
+            <p className="text-gray-400">
+              HiTech Consulting Group creates tailored software solutions to meet specific business needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            {[branchImage1, branchImage2, branchImage3].map((img, index) => (
+              <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+                <img src={img} alt={`Branch ${index + 1}`} className="w-full h-auto rounded-lg shadow-lg" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Call-to-Action */}
+      <div className="flex flex-col items-center py-12 border-t border-gray-700 font-inter px-4 md:px-8" data-aos="zoom-in">
+        <a href="mailto:info@hitechconsulting.in" target="_blank" rel="noopener noreferrer">
+          <button className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-10 rounded-lg hover:opacity-90 transition duration-300 text-base md:text-lg w-full max-w-xs md:max-w-sm">
+            Connect With Our Team
+          </button>
+        </a>
+        <div className="text-gray-500 mt-4 italic text-sm md:text-base text-center">
+          Powered by visionaries, built for scale — where innovation meets execution.
+        </div>
       </div>
-    </div>
     </div>
   );
 };

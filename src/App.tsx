@@ -16,7 +16,7 @@ function App() {
      <Helmet>
       <html lang="en" />
       <meta charSet="utf-8" />
-      <link rel="icon" href="%PUBLIC_URL%/logoIconWhite.png" />
+      <link rel="icon" href="%PUBLIC_URL%/logoIconColor.png" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
       
@@ -31,7 +31,7 @@ function App() {
         content="HiTech Consulting Group" 
       />
       
-      <link rel="apple-touch-icon" href="%PUBLIC_URL%/logoIconWhite.png" />
+      <link rel="apple-touch-icon" href="%PUBLIC_URL%/logoIconColor.png" />
       <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       <title>HiTech Consulting Group</title>
     </Helmet>

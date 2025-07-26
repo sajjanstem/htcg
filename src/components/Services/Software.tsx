@@ -1,13 +1,7 @@
 import React, { useEffect } from "react";
 import {
   Box,
-  Typography,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
+  Typography
 } from "@mui/material";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
@@ -45,16 +39,38 @@ const Software = () => {
           </ul>
         </Box>
 
-        {/* Project Portfolio */}
-        <Box className="bg-gray-900/80 rounded-xl border border-gray-700 p-6 shadow-lg" data-aos="fade-up">
-          <Typography variant="h4" className="text-3xl font-bold mb-4 text-center">Our Project Portfolio</Typography>
-          <ul className="space-y-4 text-gray-300 text-lg">
-            <li><strong>School Resource Management System</strong> – A robust web-based platform for administrative automation across 50+ schools.</li>
-            <li><strong>Online Coding Olympiad Platform</strong> – Nationwide AI-powered MCQ + coding competition engine with live ranking & analytics.</li>
-            <li><strong>Smart Healthcare Dashboard</strong> – Real-time health records, patient monitoring, and AI-based diagnosis aid for clinics.</li>
-            <li><strong>Cloud-Based Accounting Suite</strong> – An enterprise-level accounting and billing system for SMBs and startups.</li>
-          </ul>
-        </Box>
+        {/* Integrated HTML Services Section */}
+        <section className="service-area pt-20 pb-20">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
+                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon3.png" alt="Web Development" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Web Development</h4>
+                <p className="text-gray-300 text-sm">Transform Your Vision into Stunning & Profitable Websites! Our expert team crafts high-performing, intuitive, and visually appealing digital solutions to outshine competition.</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
+                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon1.png" alt="App Development" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">App Development</h4>
+                <p className="text-gray-300 text-sm">We create bespoke mobile apps focusing on innovation, ease of use, and high performance across various industries with seamless functionality and security.</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
+                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon1.png" alt="Graphic Design" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Graphic Design</h4>
+                <p className="text-gray-300 text-sm">Elevate your brand identity with striking visuals and impactful messaging. We craft designs that resonate with your brand’s story and captivate your audience.</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
+                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon2.png" alt="Digital Marketing" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Digital Marketing</h4>
+                <p className="text-gray-300 text-sm">Our full-cycle marketing includes strategy, implementation, and analytics, tailored to deliver growth, visibility, and engagement across digital platforms.</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
+                <img className="mb-4 mx-auto" src="https://accuwisetech.com/assets/images/icon/service-icon3.png" alt="Video Editing" />
+                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Video Editing</h4>
+                <p className="text-gray-300 text-sm">From brand videos to cinematic wedding edits, our team delivers high-quality, white-label video editing services that engage and inspire your target audience.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Why Choose Us */}
         <Box className="bg-gray-900/80 rounded-xl border border-gray-700 p-6 shadow-lg" data-aos="fade-up">
