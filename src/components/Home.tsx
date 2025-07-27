@@ -5,11 +5,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaMobileAlt, FaGamepad, FaGlobe, FaSearch, FaPaintBrush, FaCode } from "react-icons/fa";
 
-// Define a type for icon components to satisfy TypeScript
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
 
-// Wrapper component to render icons safely
 const IconWrapper: React.FC<{ Icon: IconComponent; className?: string }> = ({ Icon, className }) => (
   <Icon className={className} />
 );
@@ -173,28 +171,6 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-      {/* Counter Section */}
-      {/* <section className="py-16 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-        <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { icon: "https://via.placeholder.com/40x40?text=Year", count: "2019", label: "Found Year" },
-            { icon: "https://via.placeholder.com/40x40?text=Project", count: "50+", label: "Finished Projects" },
-            { icon: "https://via.placeholder.com/40x40?text=Expert", count: "50+", label: "Skilled Experts" },
-            { icon: "https://via.placeholder.com/40x40?text=Post", count: "590+", label: "Media Posts" },
-          ].map((item, index) => (
-            <div
-              key={item.label}
-              className="flex flex-col items-center"
-              data-aos="zoom-in"
-              data-aos-delay={index * 200}
-            >
-              <img src={item.icon} alt="icon" className="w-10 h-10 mb-2" />
-              <h3 className="text-3xl font-bold">{item.count}</h3>
-              <p className="text-gray-400">{item.label}</p>
-            </div>
-          ))}
-        </div>
-      </section> */}
 
       {/* Work Process Section */}
       <section className="py-16 relative">
