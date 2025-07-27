@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaCode, FaMobileAlt, FaCloud, FaRobot, FaDatabase } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
 
@@ -210,48 +209,38 @@ const AboutUs: React.FC = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div
-            className="bg-white/5 rounded-xl border border-gray-700 p-8 shadow-md text-center"
+            className="bg-white/5 rounded-xl border border-gray-700 p-8 shadow-md"
             data-aos="fade-up"
           >
-            <h3 className="text-2xl font-bold mb-4">Global Presence</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              We have a growing presence with multiple branches worldwide,
-              ensuring close collaboration with our clients and markets.
-            </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-b border-gray-700 py-6 mt-8">
-              <li className="text-gray-400">
-                <span className="font-semibold">Branches:</span> 3
-              </li>
-              <li className="text-gray-400">
-                <span className="font-semibold">1:</span> USA
-              </li>
-              <li className="text-gray-400">
-                <span className="font-semibold">2:</span> Bengaluru
-              </li>
-              <li className="text-gray-400">
-                <span className="font-semibold">3:</span> Hyderabad
-              </li>
-            </ul>
-          </div>
+            <h3 className="text-2xl font-bold mb-8 text-center">Our Offices</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-            {[
-              `${process.env.PUBLIC_URL}/assets/branch1.png`,
-              `${process.env.PUBLIC_URL}/assets/branch2.png`,
-              `${process.env.PUBLIC_URL}/assets/branch3.png`,
-            ].map((img, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div
-                key={index}
+                className="bg-white/5 rounded-xl border border-gray-700 p-6 shadow-md"
                 data-aos="fade-up"
-                data-aos-delay={index * 100}
               >
-                <img
-                  src={img}
-                  alt={`Branch ${index + 1}`}
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
+                <h4 className="text-xl font-semibold text-yellow-500 mb-3">Hyderabad Office</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Nexus Business Centre,<br />
+                  11/G194 Plot No 803, 5th Floor,<br />
+                  Ayyappa Society, Madhapur,<br />
+                  Hyderabad, Telangana 500081 - India
+                </p>
               </div>
-            ))}
+              <div
+                className="bg-white/5 rounded-xl border border-gray-700 p-6 shadow-md"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <h4 className="text-xl font-semibold text-yellow-500 mb-3">Bengaluru Office</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  131/A, 3rd Floor, NGEF Layout, Outer Ring Road,<br />
+                  Near Grand Seasons Business Hotel,<br />
+                  East of NGEF Layout, Kasturi Nagar,<br />
+                  Bengaluru, Karnataka 560043 - India
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

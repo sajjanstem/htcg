@@ -23,11 +23,11 @@ const Footer = () => {
             <Typography variant="h6" gutterBottom>Our Location</Typography>
             <Typography variant="body1">HiTech Consulting Group</Typography>
             <Typography variant="body2">
-              131/A, 3rd Floor, Outer ring road, near Grand Seasons Business Hotel, Kasturi Nagar
+              5th floor, 11/G194 Plot no 803, Nexus business centre, Madhapur
             </Typography>
-            <Typography variant="body2">Bengaluru, Karnataka 560043 (India)</Typography>
-            <Typography variant="body2">Phone: 7975176756</Typography>
-            <Typography variant="body2">Timings: 08:00 AM to 5:00 PM IST</Typography>
+            <Typography variant="body2">Hyderabad, Telangana 500081 (India)</Typography>
+            <Typography variant="body2">Phone: +91 7975176756</Typography>
+            <Typography variant="body2">Phone: +91 9666033029</Typography>
             <Typography variant="body2">
               Email: <a href="mailto:info@hitechconsultinggroup.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@hitechconsultinggroup.com</a>
             </Typography>
@@ -39,8 +39,8 @@ const Footer = () => {
             © 2025, HiTech Consulting Group. All rights reserved.
           </Typography>
           <Box mt={1}>
-            <Link to="/privacy-policy" style={{ ...linkStyle, display: 'inline', marginRight: '16px' }}>Privacy Policy</Link>
-            <Link to="/terms-conditions" style={{ ...linkStyle, display: 'inline' }}>Terms & Conditions</Link>
+            <Link to="/" style={{ ...linkStyle, display: 'inline', marginRight: '16px' }}>Privacy Policy</Link>
+            <Link to="/" style={{ ...linkStyle, display: 'inline' }}>Terms & Conditions</Link>
           </Box>
         </Box>
       </Container>

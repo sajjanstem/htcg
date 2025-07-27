@@ -137,8 +137,10 @@ const Home: React.FC = () => {
                   data-aos="fade-up"
                   data-aos-delay="200"
                 >
-                  <h4 className="font-bold text-white">24/7 Expert Support</h4>
-                  <p className="text-gray-400">Always available to support, maintain, and scale your projects with confidence.</p>
+                  <h4 className="font-bold text-white">Innovation Driven Approach</h4>
+                  <p className="text-gray-400">
+                    We embrace emerging technologies and creative strategies to deliver solutions that keep your business ahead of the curve.
+                  </p>
                 </div>
               </div>
               <Link

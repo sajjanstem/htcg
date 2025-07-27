@@ -43,13 +43,13 @@ const ContactUs = () => {
               <div className="space-y-6 text-gray-400">
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-1">
-                    Address
+                    Registered Office
                   </h3>
                   <p>
                     HiTech Consulting Group <br />
-                    131/A, 3rd Floor, NGEF Layout, Outer Ring Road <br />
-                    Near Grand Seasons Business Hotel <br />
-                    Kasturi Nagar, Bengaluru, Karnataka 560043
+                    Nexus business centre <br />
+                    11/G194 Plot no 803, 5th Floor <br />
+                    Ayyappa society, Madhapur, Hyderabad, Telangana 500081 (India)
                   </p>
                 </div>
 
@@ -69,6 +69,7 @@ const ContactUs = () => {
                   <h3 className="text-lg font-semibold text-white mb-1">
                     Phone
                   </h3>
+                  <p>+91 9666033029</p>
                   <p>+91 7975176756</p>
                 </div>
               </div>
