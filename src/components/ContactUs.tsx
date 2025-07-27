@@ -24,7 +24,7 @@ const ContactUs = () => {
       <div className="text-center py-20 px-4 border-b border-gray-700" data-aos="fade-down">
         <h1 className="text-4xl md:text-5xl font-extrabold">Contact Us</h1>
         <p className="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">
-          Let’s start a conversation. We’re here to help you build the future with innovative technology.
+          Ready to transform your vision into reality? Let’s collaborate on innovative, high-impact technology solutions
         </p>
       </div>
 
