@@ -19,18 +19,45 @@ const Home: React.FC = () => {
   return (
     <div className="bg-gradient-to-b from-gray-900 to-black min-h-screen text-gray-200 font-[Inter] relative overflow-hidden">
       <Helmet>
+        {/* Basic Meta */}
         <title>HiTech Consulting Group</title>
         <meta
           name="description"
-          content="HiTech Consulting Group - Your Partner in Web, Cloud, and AI Solutions"
+          content="HiTech Consulting Group offers innovative web development, scalable cloud solutions, and AI-driven platforms to power your digital growth."
         />
         <meta
           name="keywords"
-          content="HiTech Consulting, Web Development, Cloud Solutions, AI Development, DevOps, Machine Learning"
+          content="HiTech Consulting, Web Development, Cloud Solutions, AI, Machine Learning, DevOps, Software Services, IT Consulting"
         />
         <meta name="author" content="HiTech Consulting Group" />
-      </Helmet>
 
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="HiTech Consulting Group | Web, Cloud & AI Solutions" />
+        <meta
+          property="og:description"
+          content="Transform your business with expert-led software, cloud, and artificial intelligence services. Discover future-ready tech today."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://hitechconsultinggroup.com/" />
+        <meta property="og:image" content="https://hitechconsultinggroup.com/logo512.png" />
+        <meta property="og:site_name" content="HiTech Consulting Group" />
+
+        {/* Twitter Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HiTech Consulting Group | Web, Cloud & AI Solutions" />
+        <meta
+          name="twitter:description"
+          content="HiTech Consulting Group helps startups, enterprises, and institutions thrive with full-stack digital solutions."
+        />
+        <meta name="twitter:image" content="https://hitechconsultinggroup.com/logo512.png" />
+
+        {/* Favicon (optional if you already have in index.html, but good to duplicate here) */}
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://hitechconsultinggroup.com/" />
+      </Helmet>
       {/* Services Section */}
       <section className="py-16 relative">
         <div className="container mx-auto px-4">
