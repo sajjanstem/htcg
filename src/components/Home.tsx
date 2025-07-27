@@ -3,10 +3,9 @@ import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaMobileAlt, FaGamepad, FaGlobe, FaSearch, FaPaintBrush, FaCode } from "react-icons/fa";
+import { FaCloud, FaRobot, FaGlobe, FaSearch, FaPaintBrush, FaCode } from "react-icons/fa";
 
 type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
-
 
 const IconWrapper: React.FC<{ Icon: IconComponent; className?: string }> = ({ Icon, className }) => (
   <Icon className={className} />
@@ -23,11 +22,11 @@ const Home: React.FC = () => {
         <title>HiTech Consulting Group</title>
         <meta
           name="description"
-          content="HiTech Consulting Group - Empowering Innovation Through Technology"
+          content="HiTech Consulting Group - Your Partner in Web, Cloud, and AI Solutions"
         />
         <meta
           name="keywords"
-          content="HiTech Consulting, Technology Solutions, Software Development, AI, Blockchain, App Development, Web Development"
+          content="HiTech Consulting, Web Development, Cloud Solutions, AI Development, DevOps, Machine Learning"
         />
         <meta name="author" content="HiTech Consulting Group" />
       </Helmet>
@@ -45,36 +44,36 @@ const Home: React.FC = () => {
                 />
                 WHAT WE OFFER
               </h5>
-              <h2 className="text-3xl md:text-4xl font-bold mt-2">Exceptional IT Solutions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2">Smart IT Solutions for a Smarter Future</h2>
             </div>            
-        <Link
-          to="/services"
-          className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
+            <Link
+              to="/services"
+              className="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
               data-aos="fade-up"
-        >
-          View All Services →
-        </Link>
+            >
+              View All Services →
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: FaMobileAlt as IconComponent,
-                title: "App Development",
-                description:
-                  "Create mobile apps that users can't wait to download. We craft bespoke mobile applications focused on innovation, usability, and high performance.",
-              },
-              {
-                icon: FaGamepad as IconComponent,
-                title: "Cloud Development",
-                description:
-                  "Create interactive and immersive gaming experiences tailored to your needs. Our games emphasize creativity, performance, and user engagement.",
-              },
-              {
                 icon: FaGlobe as IconComponent,
                 title: "Web Development",
                 description:
-                  "Transform your ideas into powerful websites. We design intuitive, responsive, and scalable web applications to maximize business impact.",
+                  "Responsive, scalable, and modern websites tailored to drive your business success in the digital world.",
+              },
+              {
+                icon: FaRobot as IconComponent,
+                title: "AI & ML Solutions",
+                description:
+                  "Leverage Artificial Intelligence to automate, predict, and optimize business operations with smart algorithms.",
+              },
+              {
+                icon: FaCloud as IconComponent,
+                title: "Cloud & DevOps",
+                description:
+                  "Cloud-native applications and DevOps automation that ensure agility, speed, and seamless deployment.",
               },
             ].map((service, index) => (
               <div
@@ -93,84 +92,67 @@ const Home: React.FC = () => {
       </section>
 
       {/* About Section */}
-        <section className="py-16 relative bg-gray-800">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div className="relative" data-aos="fade-right">
-                {/* Decorative image: only visible on md and larger */}
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/aboutImage2.png"}
-                  alt="About us decorative"
-                  className="
-                    hidden md:block
-                    absolute bottom-0 left-0 w-1/2 h-auto rounded-xl shadow-lg z-10
-                    transform
-                    md:-translate-x-16 md:-translate-y-6
-                  "
-                />
+      <section className="py-16 relative bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative" data-aos="fade-right">
+              <img
+                src={process.env.PUBLIC_URL + "/assets/aboutImage2.png"}
+                alt="About us decorative"
+                className="hidden md:block absolute bottom-0 left-0 w-1/2 h-auto rounded-xl shadow-lg z-10 transform md:-translate-x-16 md:-translate-y-6 opacity-50"
+              />
+              <img
+                src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
+                alt="About us"
+                className="relative rounded-xl shadow-lg h-auto max-h-[500px] object-cover z-20 w-full mx-auto md:w-[85%] md:translate-x-10 md:mx-0"
+              />
+            </div>
 
-                {/* Main image */}
+            <div data-aos="fade-left">
+              <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
                 <img
-                  src={process.env.PUBLIC_URL + "/assets/aboutImage1.png"}
-                  alt="About us"
-                  className="
-                    relative rounded-xl shadow-lg h-auto max-h-[500px] object-cover z-20
-                    w-full mx-auto
-                    md:w-[85%] md:translate-x-10 md:mx-0
-                  "
+                  src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
+                  alt="icon"
+                  className="mr-2"
                 />
-              </div>
-
-              <div data-aos="fade-left">
-                <h5 className="text-yellow-500 flex items-center text-lg font-semibold">
-                  <img
-                    src={process.env.PUBLIC_URL + "/assets/slideIcon.png"}
-                    alt="icon"
-                    className="mr-2"
-                  />
-                  ABOUT US
-                </h5>
-                <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
-                  Empowering Your Business with Innovative IT & AI Solutions
-                </h2>
-                <p className="text-gray-400 mb-4">
-                  HiTech Consulting Group is a technology company offering a suite of IT services: web/app development, data migration, cloud projects, and more. Our mission is to empower businesses to harness technology to achieve their goals.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                  <div
-                    className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
-                    data-aos="fade-up"
-                    data-aos-delay="100"
-                  >
-                    <h4 className="font-bold text-white">Premier Offerings</h4>
-                    <p className="text-gray-400">
-                      Top-tier IT services with modern AI-powered solutions.
-                    </p>
-                  </div>
-                  <div
-                    className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
-                    data-aos="fade-up"
-                    data-aos-delay="200"
-                  >
-                    <h4 className="font-bold text-white">24/7 Call Support</h4>
-                    <p className="text-gray-400">
-                      We provide continuous support for all client needs.
-                    </p>
-                  </div>
-                </div>
-                <Link
-                  to="/aboutus"
-                  className="inline-block mt-6 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
+                ABOUT US
+              </h5>
+              <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
+                Driving Digital Innovation with Web, Cloud, and AI
+              </h2>
+              <p className="text-gray-400 mb-4">
+                HiTech Consulting Group is a future-ready tech company offering full-stack web development, cloud engineering, and intelligent AI-driven solutions. Our mission is to empower businesses to embrace the digital future efficiently.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                <div
+                  className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
                   data-aos="fade-up"
-                  data-aos-delay="300"
+                  data-aos-delay="100"
                 >
-                  Explore More →
-                </Link>
+                  <h4 className="font-bold text-white">Scalable Tech Stack</h4>
+                  <p className="text-gray-400">From startups to enterprises, our technology adapts and grows with your business.</p>
+                </div>
+                <div
+                  className="backdrop-blur-sm bg-white bg-opacity-5 rounded-xl border border-gray-700 p-4 shadow-md"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <h4 className="font-bold text-white">24/7 Expert Support</h4>
+                  <p className="text-gray-400">Always available to support, maintain, and scale your projects with confidence.</p>
+                </div>
               </div>
+              <Link
+                to="/aboutus"
+                className="inline-block mt-6 bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold py-3 px-6 rounded-lg hover:opacity-90 transition duration-300"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                Explore More →
+              </Link>
             </div>
           </div>
-        </section>
-
+        </div>
+      </section>
 
       {/* Work Process Section */}
       <section className="py-16 relative">
@@ -184,27 +166,27 @@ const Home: React.FC = () => {
             Work Process
           </h5>
           <h2 className="text-3xl md:text-4xl font-bold mb-12" data-aos="fade-up" data-aos-delay="200">
-            How We Build Your Solutions
+            How We Build Next-Gen Solutions
           </h2>
           <div className="grid md:grid-cols-3 gap-12">
             {[
               {
                 icon: FaSearch as IconComponent,
-                title: "Research",
+                title: "Requirement Discovery",
                 description:
-                  "Throughout the project lifecycle, we gather, analyze, document, and validate requirements to ensure the final solution meets stakeholder needs.",
+                  "Understanding your business needs thoroughly to align solutions with long-term success.",
               },
               {
                 icon: FaPaintBrush as IconComponent,
-                title: "Design and Mockup",
+                title: "Prototyping & Design",
                 description:
-                  "Turning requirements into tangible prototypes that can be reviewed and refined before development.",
+                  "Crafting UI/UX and flows before development begins, ensuring clarity and alignment.",
               },
               {
                 icon: FaCode as IconComponent,
-                title: "Development",
+                title: "Development & Deployment",
                 description:
-                  "From architecture to full-scale implementation, we build high-performance and scalable tech solutions.",
+                  "Building secure, scalable, and reliable systems using the best industry practices.",
               },
             ].map((process, index) => (
               <div
@@ -230,7 +212,7 @@ const Home: React.FC = () => {
           </button>
         </a>
         <div className="text-gray-500 mt-4 italic text-sm md:text-base text-center">
-          Powered by visionaries, built for scale — where innovation meets execution.
+          Powering your digital transformation with precision, passion, and performance.
         </div>
       </div>
     </div>

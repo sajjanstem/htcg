@@ -1,100 +1,214 @@
 import React, { useEffect } from "react";
-import {
-  Box,
-  Typography
-} from "@mui/material";
 import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import {
+  FaCode,
+  FaMobileAlt,
+  FaCloud,
+  FaRobot,
+  FaDatabase,
+  FaProjectDiagram,
+  FaUsersCog,
+  FaCogs,
+  FaHandshake,
+  FaRocket,
+} from "react-icons/fa";
+
+type IconComponent = React.ComponentType<React.SVGProps<SVGSVGElement>>;
+
+const IconWrapper: React.FC<{ Icon: IconComponent; className?: string }> = ({
+  Icon,
+  className,
+}) => <Icon className={className} />;
+
+type Service = {
+  title: string;
+  description: string;
+  icon: IconComponent;
+};
+
+type Advantage = {
+  title: string;
+  description: string;
+  icon: IconComponent;
+};
 
 const Software = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  const services: Service[] = [
+    {
+      title: "Custom Software Development",
+      description:
+        "Secure, scalable software tailored for your enterprise, startup, or institution.",
+      icon: FaCode as IconComponent,
+    },
+    {
+      title: "AI & ML Solutions",
+      description:
+        "Intelligent platforms for automation, prediction, NLP, and more.",
+      icon: FaRobot as IconComponent,
+    },
+    {
+      title: "Web & Mobile Apps",
+      description:
+        "Seamless cross-platform apps with modern UI and robust performance.",
+      icon: FaMobileAlt as IconComponent,
+    },
+    {
+      title: "Cloud & DevOps",
+      description:
+        "Deploy faster with CI/CD, containerization, monitoring, and cloud-native design.",
+      icon: FaCloud as IconComponent,
+    },
+    {
+      title: "Data Migration & Integration",
+      description:
+        "Smooth, secure migration from legacy to modern systems and cloud infrastructure.",
+      icon: FaDatabase as IconComponent,
+    },
+    {
+      title: "Digital Transformation Consulting",
+      description:
+        "Aligning business strategy with tech solutions to drive innovation and growth.",
+      icon: FaProjectDiagram as IconComponent,
+    },
+  ];
+
+  const advantages: Advantage[] = [
+    {
+      title: "Expert Engineering Team",
+      description:
+        "Our team brings together diverse industry experience and exceptional problem-solving skills to deliver impactful results.",
+      icon: FaUsersCog as IconComponent,
+    },
+    {
+      title: "Cutting-Edge Tech Stack",
+      description:
+        "We utilize modern technologies like React, Next.js, Python, Docker, AWS & Azure to build future-proof platforms.",
+      icon: FaCogs as IconComponent,
+    },
+    {
+      title: "Agile & Transparent Execution",
+      description:
+        "Our agile approach ensures continuous delivery, fast iterations, and clear communication throughout the project lifecycle.",
+      icon: FaRocket as IconComponent,
+    },
+    {
+      title: "End-to-End Ownership",
+      description:
+        "We manage everything—from UI/UX design and architecture to launch and post-deployment support.",
+      icon: FaCode as IconComponent,
+    },
+    {
+      title: "Client-Centric Collaboration",
+      description:
+        "We work closely with you at every stage to ensure the solution aligns perfectly with your business goals.",
+      icon: FaHandshake as IconComponent,
+    },
+  ];
+
   return (
-    <Box className="bg-gradient-to-b from-gray-900 to-black min-h-screen text-gray-200 font-[Inter] relative overflow-hidden">
+    <section className="bg-gradient-to-b from-gray-900 to-black text-gray-200 font-[Inter] min-h-screen">
       <Helmet>
-        <title>HiTech Consulting Group | Enterprise Software Services</title>
-        <meta name="description" content="HiTech Consulting Group offers robust software services, digital solutions, and enterprise transformation for businesses and institutions." />
-        <meta name="keywords" content="software development, enterprise solutions, AI, IT consulting, HiTech" />
+        <title>HiTech Consulting Group | Software Services</title>
+        <meta
+          name="description"
+          content="HiTech Consulting Group offers enterprise-grade software solutions, AI-powered platforms, and cutting-edge cloud services tailored for businesses and institutions."
+        />
+        <meta
+          name="keywords"
+          content="software, enterprise, AI, cloud, devops, digital transformation, consulting"
+        />
         <meta name="author" content="HiTech Consulting Group" />
       </Helmet>
 
-      <div className="text-center py-12 border-b border-gray-700" data-aos="fade-down">
-        <h1 className="text-4xl md:text-6xl font-extrabold">Transforming Ideas into Innovative Digital Solutions</h1>
-        <p className="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">Empowering institutions, enterprises, and startups with end-to-end custom software development, AI integration, and digital modernization services.</p>
+      {/* Header */}
+      <div className="text-center py-20 px-4 border-b border-gray-700" data-aos="fade-down">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          Enterprise-Grade Software Solutions
+        </h1>
+        <p className="text-gray-400 text-lg mt-4 max-w-3xl mx-auto">
+          We empower organizations with scalable, secure, and intelligent software solutions built for the future.
+        </p>
       </div>
 
-      <section className="max-w-6xl mx-auto py-12 px-4 space-y-12">
-        {/* Our Services */}
-        <Box className="bg-gray-900/80 rounded-xl border border-gray-700 p-6 shadow-lg" data-aos="fade-up">
-          <Typography variant="h4" className="text-3xl font-bold mb-4 text-center">Our Core Services</Typography>
-          <ul className="space-y-4 text-gray-300 text-lg">
-            <li><strong>Custom Software Development:</strong> From enterprise portals to tailored SaaS solutions, we build secure, scalable applications.</li>
-            <li><strong>AI & ML Solutions:</strong> Intelligent systems for automation, data prediction, NLP, and real-time decision-making.</li>
-            <li><strong>Web & Mobile Applications:</strong> Cross-platform applications using React, Flutter, and Next.js with modern UI/UX.</li>
-            <li><strong>Cloud & DevOps:</strong> Azure, AWS, and GCP architecture, CI/CD pipelines, containerization & monitoring services.</li>
-            <li><strong>Consulting & IT Transformation:</strong> Strategy, modernization, and digital transformation for organizations of all sizes.</li>
-          </ul>
-        </Box>
-
-        {/* Integrated HTML Services Section */}
-        <section className="service-area pt-20 pb-20">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon1.png"} alt="Web Development" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Web Development</h4>
-                <p className="text-gray-300 text-sm">Transform Your Vision into Stunning & Profitable Websites! Our expert team crafts high-performing, intuitive, and visually appealing digital solutions to outshine competition.</p>
+      {/* Services Section */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-up">
+          What We Offer
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+              <div className="text-yellow-400 text-4xl mb-4 mx-auto w-fit">
+                <IconWrapper Icon={service.icon} />
               </div>
-              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon2.png"} alt="App Development" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">App Development</h4>
-                <p className="text-gray-300 text-sm">We create bespoke mobile apps focusing on innovation, ease of use, and high performance across various industries with seamless functionality and security.</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon3.png"} alt="Cloud Services" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Cloud Services</h4>
-                <p className="text-gray-300 text-sm">Elevate your brand identity with striking visuals and impactful messaging. We craft designs that resonate with your brand’s story and captivate your audience.</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon2.png"} alt="AI powered solutions" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">AI powered solutions</h4>
-                <p className="text-gray-300 text-sm">Our full-cycle developement includes strategy, implementation, and analytics, tailored to deliver growth, visibility, and engagement across digital platforms.</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6" data-aos="zoom-in">
-                <img className="mb-4 mx-auto" src={process.env.PUBLIC_URL + "/assets/serviceIcon1.png"} alt="Video Editing" />
-                <h4 className="text-xl font-semibold mb-2 text-center text-yellow-400">Data Migration</h4>
-                <p className="text-gray-300 text-sm">From brand videos to cinematic wedding edits, our team delivers high-quality, white-label video editing services that engage and inspire your target audience.</p>
-              </div>
+              <h4 className="text-xl font-semibold text-center mb-2">
+                {service.title}
+              </h4>
+              <p className="text-gray-300 text-sm text-center">
+                {service.description}
+              </p>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
+      </div>
 
-        {/* Why Choose Us */}
-        <Box className="bg-gray-900/80 rounded-xl border border-gray-700 p-6 shadow-lg" data-aos="fade-up">
-          <Typography variant="h4" className="text-3xl font-bold mb-4 text-center">Why Choose HiTech?</Typography>
-          <ul className="space-y-3 text-gray-300 text-lg">
-            <li>🔹 Experienced team from IITs, NITs, and top-tier engineering backgrounds.</li>
-            <li>🔹 Agile methodologies, rapid prototyping, and pixel-perfect delivery.</li>
-            <li>🔹 Transparent process, documentation, and unmatched post-deployment support.</li>
-            <li>🔹 Trusted by educational institutions, NGOs, startups, and businesses across India.</li>
-          </ul>
-        </Box>
+      {/* Why Choose Us Section */}
+      <div className="bg-gray-900 border-t border-gray-700 py-16 px-6">
+        <div className="max-w-6xl mx-auto text-center mb-12" data-aos="fade-up">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            Why Choose HiTech Consulting Group?
+          </h3>
+          <p className="text-gray-400 text-lg md:text-xl">
+            We blend domain expertise, agile practices, and deep tech capabilities to deliver digital solutions that scale.
+          </p>
+        </div>
 
-        {/* Call to Action */}
-        <Box className="text-center py-8 border-t border-gray-700" data-aos="fade-up">
-          <Typography variant="h5" className="text-2xl font-bold mb-4">Let’s Build Something Exceptional Together</Typography>
-          <p className="text-lg text-gray-400 mb-6">Schedule a free consultation and discover how HiTech Consulting Group can elevate your digital journey.</p>
-          <a href="mailto:info@hitechconsultinggroup.com">
-            <button className="bg-gradient-to-r from-yellow-600 to-yellow-400 text-black font-bold py-3 px-10 rounded-lg hover:opacity-90 transition duration-300 text-base md:text-lg">
-              Contact Us Today
-            </button>
-          </a>
-        </Box>
-      </section>
-    </Box>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {advantages.map((item, index) => (
+            <div
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              className="bg-gray-800 border border-gray-700 p-6 rounded-xl shadow hover:shadow-lg transition"
+            >
+              <div className="text-yellow-400 text-4xl mb-4">
+                <IconWrapper Icon={item.icon} />
+              </div>
+              <h4 className="text-xl font-semibold text-white mb-2">
+                {item.title}
+              </h4>
+              <p className="text-gray-400">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="text-center py-12 border-t border-gray-700 px-4" data-aos="fade-up">
+        <h4 className="text-2xl font-bold mb-4">
+          Let’s Discuss Your Software Goals
+        </h4>
+        <p className="text-lg text-gray-400 mb-6 max-w-xl mx-auto">
+          Partner with us to unlock your organization’s full digital potential through technology.
+        </p>
+        <a href="mailto:info@hitechconsultinggroup.com">
+          <button className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-black font-bold py-3 px-8 rounded-lg hover:opacity-90 transition duration-300">
+            Get in Touch →
+          </button>
+        </a>
+      </div>
+    </section>
   );
 };
 
