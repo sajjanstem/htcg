@@ -49,7 +49,8 @@ const ContactUs = () => {
                     HiTech Consulting Group <br />
                     Nexus business centre <br />
                     11/G194 Plot no 803, 5th Floor <br />
-                    Ayyappa society, Madhapur, Hyderabad, Telangana 500081 (India)
+                    Ayyappa society, Madhapur, Hyderabad, Telangana 500081 <br />
+                    India
                   </p>
                 </div>
 

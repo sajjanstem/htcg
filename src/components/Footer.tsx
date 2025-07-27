@@ -25,7 +25,8 @@ const Footer = () => {
             <Typography variant="body2">
               5th floor, 11/G194 Plot no 803, Nexus business centre, Madhapur
             </Typography>
-            <Typography variant="body2">Hyderabad, Telangana 500081 (India)</Typography>
+            <Typography variant="body2">Hyderabad, Telangana 500081</Typography>
+            <Typography variant="body2">India</Typography>
             <Typography variant="body2">Phone: +91 7975176756</Typography>
             <Typography variant="body2">Phone: +91 9666033029</Typography>
             <Typography variant="body2">

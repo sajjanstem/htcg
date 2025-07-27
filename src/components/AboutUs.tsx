@@ -236,7 +236,7 @@ const AboutUs: React.FC = () => {
                 <p className="text-gray-400 text-sm leading-relaxed">
                   131/A, 3rd Floor, NGEF Layout, Outer Ring Road,<br />
                   Near Grand Seasons Business Hotel,<br />
-                  East of NGEF Layout, Kasturi Nagar,<br />
+                  Kasturi Nagar,<br />
                   Bengaluru, Karnataka 560043 - India
                 </p>
               </div>
